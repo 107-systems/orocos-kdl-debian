@@ -17,7 +17,7 @@ jobs:
           pip install psutil future
       - name: build orocos_kdl_package
         run: |
-          ls    
+          ls "${GITHUB_WORKSPACE}"
           chmod +x "${GITHUB_WORKSPACE}/build.sh"
           "${GITHUB_WORKSPACE}/build.sh"
           ls
