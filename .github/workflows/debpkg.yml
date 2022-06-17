@@ -34,5 +34,5 @@ jobs:
       - name: upload debpkg to artifactory
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ env.Project }}-${{ steps.vars.outputs.commit }}/debpkg
+          name: ${{ env.Project }}-${{ steps.vars.outputs.commit }}-debpkg
           path: orocos_kinematics_dynamics/orocos_kdl/install/*.deb
