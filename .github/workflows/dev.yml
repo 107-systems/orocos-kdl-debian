@@ -10,6 +10,9 @@ jobs:
       fail-fast: false
 
     steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+
       - name: setup enviroment
         run: |
           sudo apt-get install libeigen3-dev libcppunit-dev
@@ -17,7 +20,7 @@ jobs:
           pip install psutil future
       - name: build orocos_kdl_package
         run: |
-          cd ${{github.workspace}}
+          ls
           chmod +x build.sh
           ./build.sh
           ls
