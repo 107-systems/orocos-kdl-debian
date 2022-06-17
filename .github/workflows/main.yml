@@ -13,7 +13,7 @@ jobs:
       - name: setup enviroment
         run: |
           sudo apt-get install libeigen3-dev libcppunit-dev
-          sudo apt-get install aar
+          sudo apt-get install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           pip install psutil future
       - name: build orocos_kdl_package
         run: |
