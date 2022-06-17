@@ -6,6 +6,9 @@ on:
   schedule:
     - cron: '0 13 * * 1'
 
+env:
+  tag: v1.5.1
+
 jobs:
   build:
     name: build debpkg
@@ -30,7 +33,7 @@ jobs:
         run: |
           ls
           chmod +x build.sh
-          ./build.sh ${{matrix.compiler}}
+          ./build.sh ${{matrix.compiler}} ${tag}
           ls
 
       - name: upload debpkg to artifactory
