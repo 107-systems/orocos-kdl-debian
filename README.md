@@ -2,4 +2,5 @@
 :floppy_disk: `l3xz_teleop`
 [![Build Status](https://github.com/107-systems/orocos-kdl-debian/actions/workflows/debpkg.yml/badge.svg)](https://github.com/107-systems/orocos-kdl-debian/actions/workflows/debpkg.yml)
 ===========================
-Cross compilation of orocos_kinematics_dynamics library with aarch64-linux-gnu and arm-linux-gnueabihf toolchain.
+Cross compilation of [orocos_kinematics_dynamics](https://github.com/orocos/orocos_kinematics_dynamics) library with aarch64-linux-gnu and arm-linux-gnueabihf toolchain.
+The build is automated in an Action, which has a set of *.deb packages as output for easy deployment.
