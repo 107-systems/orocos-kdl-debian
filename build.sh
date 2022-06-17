@@ -6,7 +6,7 @@ mkdir build
 mkdir install
 cd build
 cmake .. -D CMAKE_INSTALL_PREFIX=../install -D CMAKE_C_COMPILER=aarch64-linux-gnu-gcc -D CMAKE_CXX_COMPILER=aarch64-linux-gnu-g++
-make -j($nproc) install
+make -j$(nproc) install
 cd ../install
 mkdir kdl-107
 cd kdl-107
