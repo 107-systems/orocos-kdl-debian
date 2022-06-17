@@ -3,7 +3,7 @@ name: debpkg
 on: 
   push:
   pull_request:
-  shedule:
+  schedule:
     -cron '0 13 * * 1'
 
 jobs:
