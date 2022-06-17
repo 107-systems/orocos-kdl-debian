@@ -3,6 +3,9 @@
 git clone https://github.com/orocos/orocos_kinematics_dynamics.git
 cd orocos_kinematics_dynamics
 git checkout $2
+cd orocos_kdl
+rm -r build 
+rm -r install
 mkdir build
 mkdir install
 cd build
