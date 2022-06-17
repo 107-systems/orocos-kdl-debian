@@ -1,0 +1,20 @@
+name: debpkg 
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build
+    runs-on:  ubuntu-20.04
+    strategy:
+      fail-fast: false
+
+    steps:
+      - name: setup enviroment
+        run: |
+          sudo apt-get install libeigen3-dev libcppunit-dev
+          sudo apt-get install aar
+          pip install psutil future
+      - name: build orocos_kdl_package
+        run: |
+          ./build.sh
