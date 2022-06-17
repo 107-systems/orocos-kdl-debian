@@ -18,7 +18,7 @@ cp -r ../lib usr/
 cp -r ../share usr/
 mkdir DEBIAN
 cd DEBIAN
-echo "Package: kdl-107
+echo "Package: kdl-107-$1
 Version: 0.3.13
 Architecture: all
 Maintainer: John Doe<your-email@gmail.com>
