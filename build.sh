@@ -10,8 +10,8 @@ cd build
 cmake .. -D CMAKE_INSTALL_PREFIX=../install -D CMAKE_C_COMPILER=$1-gcc -D CMAKE_CXX_COMPILER=$1-g++
 make -j$(nproc) install
 cd ../install
-mkdir kdl-107
-cd kdl-107
+mkdir kdl-107-$1
+cd kdl-107-$1
 mkdir usr
 cp -r ../include usr/
 cp -r ../lib usr/
