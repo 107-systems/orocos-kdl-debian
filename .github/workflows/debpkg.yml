@@ -33,7 +33,7 @@ jobs:
         run: |
           ls
           chmod +x build.sh
-          ./build.sh ${{matrix.compiler}} ${tag}
+          ./build.sh ${{matrix.compiler}} $tag
           ls
 
       - name: upload debpkg to artifactory
