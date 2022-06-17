@@ -28,11 +28,11 @@ jobs:
         run: |
           ls
           chmod +x build.sh
-          ./build.sh
+          ./build.sh aarch64-linux-gnu
           ls
 
       - name: upload debpkg to artifactory
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ env.Project }}-${{ steps.vars.outputs.commit }}-debpkg
-          path: orocos_kinematics_dynamics/orocos_kdl/install/*.deb
+          name: debpkg
+          path: ./*.deb

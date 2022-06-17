@@ -7,7 +7,7 @@ rm -r install
 mkdir build
 mkdir install
 cd build
-cmake .. -D CMAKE_INSTALL_PREFIX=../install -D CMAKE_C_COMPILER=aarch64-linux-gnu-gcc -D CMAKE_CXX_COMPILER=aarch64-linux-gnu-g++
+cmake .. -D CMAKE_INSTALL_PREFIX=../install -D CMAKE_C_COMPILER=$1-gcc -D CMAKE_CXX_COMPILER=$1-g++
 make -j$(nproc) install
 cd ../install
 mkdir kdl-107
@@ -26,6 +26,6 @@ Depengs:
 Homepage: https://github.com/shinokada/tera
 Description: 107-Systems kdl cross pkg." &> control
 cd ../../
-sudo chown root:root -R kdl-107
+sudo chown root:root -R kdl-107-$1
 dpkg-deb --build kdl-107
-
+cp orocos_kinematics_dynamics/orocos_kdl/install/*.deb .
