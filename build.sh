@@ -28,4 +28,5 @@ Description: 107-Systems kdl cross pkg." &> control
 cd ../../
 sudo chown root:root -R kdl-107-$1
 dpkg-deb --build kdl-107-$1
+cd ../../../
 cp orocos_kinematics_dynamics/orocos_kdl/install/*.deb .
