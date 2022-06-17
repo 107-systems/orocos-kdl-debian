@@ -1,6 +1,10 @@
 name: debpkg 
 
-on: [push, pull_request]
+on: 
+  push:
+  pull_request:
+  shedule:
+    -cron '0 13 * * 1'
 
 jobs:
   build:
@@ -17,6 +21,7 @@ jobs:
         run: |
           sudo apt-get install libeigen3-dev libcppunit-dev
           sudo apt-get install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
+          sudo apt-get install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf
           pip install psutil future
 
       - name: build orocos_kdl_package
@@ -29,5 +34,5 @@ jobs:
       - name: upload debpkg to artifactory
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ env.Project }}-${{ steps.vars.outputs.commit }}
+          name: ${{ env.Project }}-${{ steps.vars.outputs.commit }}/debpkg
           path: orocos_kinematics_dynamics/orocos_kdl/install/*.deb
