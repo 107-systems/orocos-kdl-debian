@@ -12,6 +12,8 @@ jobs:
     runs-on:  ubuntu-20.04
     strategy:
       fail-fast: false
+      matrix:
+        compiler: [aarch64-linux-gnu, arm-linux-gnueabihf]
 
     steps:
       - name: set up git repository
@@ -28,7 +30,7 @@ jobs:
         run: |
           ls
           chmod +x build.sh
-          ./build.sh aarch64-linux-gnu
+          ./build.sh ${{matrix.compiler}}
           ls
 
       - name: upload debpkg to artifactory
