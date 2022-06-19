@@ -36,11 +36,11 @@ cp -r ../share usr/
 mkdir DEBIAN
 cd DEBIAN
 echo "Package: kdl-107-$1
-Version: 0.3.13
+Version: 0.0.1
 Architecture: all
 Maintainer: Jonas Wühr 
 Depends: libeigen3-dev 
-Homepage: https://github.com/shinokada/tera
+Homepage: - 
 Description: 107-Systems kdl cross pkg." &> control
 cd ../../
 sudo chown root:root -R kdl-107-$1
