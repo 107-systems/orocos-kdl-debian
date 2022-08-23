@@ -5,6 +5,10 @@
 
 Use GitHub Actions to build Debian package of the [orocos_kinematics_dynamics](https://github.com/orocos/orocos_kinematics_dynamics) library for both `aarch64-linux-gnu` and `arm-linux-gnueabihf`. Running the [debpkg action](.github/workflows/debpkg.yml) creates a set of `*.deb` packages as artifacts which can be downloaded and used for installing orocos-kdl on the target system.
 
+<p align="center">
+  <a href="https://github.com/107-systems/l3xz"><img src="https://raw.githubusercontent.com/107-systems/.github/main/logo/l3xz-logo-memento-mori-github.png" width="30%"></a>
+</p>
+
 #### How-To-Install
 On the device, run the following command:
 ```bash
