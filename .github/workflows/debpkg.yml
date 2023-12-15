@@ -37,7 +37,7 @@ jobs:
           ls
 
       - name: upload debpkg to artifactory
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: debpkg
           path: ./*.deb
