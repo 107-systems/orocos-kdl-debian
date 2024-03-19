@@ -40,5 +40,5 @@ jobs:
       - name: upload debpkg to artifactory
         uses: actions/upload-artifact@v4
         with:
-          name: debpkg
+          name: debpkgt-${{ matrix.compiler }}
           path: ./*.deb
